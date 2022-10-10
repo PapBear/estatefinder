@@ -33,7 +33,7 @@ export default {
     height: 100vh;
     max-width: 414px;
     margin: 0 auto;
-    background-color: white ;
+    background-color: #F8F8F8 ;
     overflow: auto;
     &::-webkit-scrollbar {
       display: none;

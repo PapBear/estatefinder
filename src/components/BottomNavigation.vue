@@ -37,7 +37,7 @@
 
 <script>
 export default {
-  name: 'Header',
+  name: 'BottomNavigation',
   props: {
     msg: String
   }
