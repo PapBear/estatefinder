@@ -1,13 +1,13 @@
 <template>
   <div class="bottomnavigation">
     <div class="bottomnavigation__menu">
-      <div class="bottomnavigation__menu-container">
+      <div class="bottomnavigation__menu-container" @click="pushRouter('')">
         <div class="bottomnavigation__menu-circle">
           <img src="@/assets/images/search.png" alt="search"/>
         </div>
         <p class="bottomnavigation__menu-text">SEARCH</p>
       </div>
-      <div class="bottomnavigation__menu-container">
+      <div class="bottomnavigation__menu-container" @click="pushRouter('chat')">
         <div class="bottomnavigation__menu-circle">
           <img src="@/assets/images/chat.png" alt="chat"/>
         </div>
@@ -40,6 +40,11 @@ export default {
   name: 'BottomNavigation',
   props: {
     msg: String
+  },
+  methods: {
+    pushRouter(route) {
+      this.$router.push('/'+route).catch(() => {})
+    }
   }
 }
 </script>

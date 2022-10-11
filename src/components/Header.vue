@@ -5,7 +5,7 @@
     </div>
     <div class="header__right">
       <img src="@/assets/images/notification.png" class="header__right-image header__right-image_first" alt="notification">
-      <img src="@/assets/images/favorite.png" class="header__right-image" alt="favorite">
+      <img src="@/assets/images/favorite.png" class="header__right-image header__right-image_last" alt="favorite">
     </div>
   </div>
 </template>

@@ -9,6 +9,7 @@
   max-width: 414px;
   &__menu {
     display: flex;
+    justify-content: center;
     &-container {
       cursor: pointer;
       display: flex;

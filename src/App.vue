@@ -1,25 +1,25 @@
 <template>
   <div id="app">
     <div class="app__container">
-      <Header></Header>
+      <!-- <Header></Header> -->
       <div class="app__body">
         <router-view/>
       </div>
-      <BottomNavigation></BottomNavigation>
+      <!-- <BottomNavigation></BottomNavigation> -->
     </div>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import Header from '@/components/Header.vue'
-import BottomNavigation from '@/components/BottomNavigation.vue'
+// import Header from '@/components/Header.vue'
+// import BottomNavigation from '@/components/BottomNavigation.vue'
 
 export default {
   name: 'App',
   components: {
-    Header,
-    BottomNavigation
+    // Header,
+    // BottomNavigation
   }
 }
 </script>
@@ -45,7 +45,7 @@ export default {
       
     }
     &__body {
-      padding-top: 74px;
+      // padding-top: 74px;
     }
   }
 </style>
