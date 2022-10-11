@@ -84,16 +84,32 @@
     </div>
     <div class="detail__another-props">
       <p class="detail__another-props-text">Property near Jakarta Selatan</p>
+      <div class="detail__another-props-item" v-for="(dt,index) in moreEstate" :key="index">
+        <ResultCard :dataEstate="dt"></ResultCard>
+      </div>
+    </div>
+    <div class="detail__bottom">
+      <div class="detail__bottom-price">
+        <p class="detail__bottom-price-text">Price Start From :</p>
+        <p class="detail__bottom-price-text">{{dataEstate.price}}</p>
+      </div>
+      <div class="detail__bottom-contact">
+        <div class="detail__bottom-contact-button" @click="goToChat()">
+          <img src="@/assets/images/message.png" alt="message" />
+          <p class="detail__bottom-contact-button-text">Contact Landlord</p>
+        </div>
+      </div>
     </div>
   </div>
 </template>
 
 <script>
+import ResultCard from '@/components/ResultCard.vue'
 
 export default {
   name: 'Detail',
   components: {
-    
+    ResultCard
   },
   data() {
     return {
@@ -126,6 +142,37 @@ export default {
           value: "rent"
         },
       },
+      moreEstate: [
+        {
+          image: [
+            require('@/assets/images/house1.png'),
+            require('@/assets/images/house2.png'),
+            require('@/assets/images/house3.png'),
+          ],
+          room:  2,
+          bathRoom: 1,
+          area: 250,
+          buildingSize: 300,
+          furnished: "Yes",
+          garage: "Yes",
+          Carport: "No",
+          title: "Rumah Tipe 68 Jalan Petukangan Jakarta Selatan , Budi Hasian",
+          price: "Rp 800 Juta",
+          certification: "SHM",
+          location: {
+            name: "Jakarta Selatan",
+            code: "jakartaselatan"
+          },
+          type: {
+            name: "House",
+            value: "house"
+          },
+          status: {
+            name: "Rent",
+            value: "rent"
+          },
+        },
+      ],
       menuSelected: "detail"
     }
   },
@@ -138,6 +185,9 @@ export default {
     },
     changeMenu(param) {
       this.menuSelected = param
+    },
+    goToChat() {
+      this.$router.push('/chat')
     }
   }
 }
