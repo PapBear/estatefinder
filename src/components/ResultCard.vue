@@ -1,5 +1,5 @@
 <template>
-  <div class="resultcard">
+  <div class="resultcard" @click="goToDetail()">
     <div class="resultcard__content">
       <img class="resultcard__content-image" :src="dataEstate.image[0]"/>
       <div class="resultcard__content-information">
@@ -25,6 +25,11 @@ export default {
   },
   mounted() {
     console.log(this.dataEstate)
+  },
+  methods: {
+    goToDetail() {
+      this.$router.push('/detail')
+    }
   }
 }
 </script>
