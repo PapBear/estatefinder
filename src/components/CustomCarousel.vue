@@ -23,13 +23,19 @@ export default {
     }
   },
   mounted() {
+    this.initialScroll()
     this.checkScrolling()
   },
   methods: {
+    initialScroll() {
+      const scrollElm = document.getElementsByClassName('customcarousel')[0]
+      setTimeout(() => {
+        scrollElm.scrollLeft = 0
+      }, 100)
+    },
     checkScrolling() {
       const scrollEvt = document.getElementsByClassName('customcarousel')[0]
       scrollEvt.addEventListener("scroll", () => {
-        console.log(Math.round(scrollEvt.scrollLeft / 300))
         this.indexScroll = Math.round(scrollEvt.scrollLeft / 300)
       });
     }

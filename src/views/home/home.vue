@@ -32,7 +32,7 @@ export default {
   },
   methods: {
     processFind(data) {
-      console.log(data)
+      this.$router.push({ name: 'Result', params: {resultData: data }})
     }
   }
 }
