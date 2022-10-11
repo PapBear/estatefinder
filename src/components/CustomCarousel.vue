@@ -18,6 +18,9 @@ export default {
         require('@/assets/images/house1.png'),
         require('@/assets/images/house2.png'),
         require('@/assets/images/house3.png'),
+        require('@/assets/images/house1.png'),
+        require('@/assets/images/house2.png'),
+        require('@/assets/images/house3.png')
       ],
       indexScroll: 0
     }

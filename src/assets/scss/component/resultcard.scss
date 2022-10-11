@@ -1,0 +1,35 @@
+.resultcard {
+  margin-bottom: 31px;
+  &__content {
+    margin-top: 15px;
+    &-circle {
+      width: 3px;
+      height: 3px;
+      border-radius: 25px;
+      background-color: #79828B;
+      margin: 0px 5px;
+    }
+    &-image {
+      width: 100%;
+      margin-bottom: 15px;
+    }
+    &-information {
+      display: flex;
+      align-items: center;
+      margin-bottom: 5px;
+      &-text {
+        @include font(10px, 16px, 400, #79828B);
+        &_sup {
+          font-size: 75%;
+          vertical-align: top;
+        }
+      }
+    }
+    &-title {
+      margin-bottom: 4px;
+      &-text {
+        @include font(14px, 18px, 600, #42505C)
+      }
+    }
+  }
+}

@@ -1,4 +1,4 @@
-@mixin font($fontsize, $lineheight, $fontweight: 400,$color:$maingray){
+@mixin font($fontsize, $lineheight, $fontweight: 400,$color: "#FFFFFF"){
     font-size: $fontsize;
     line-height: $lineheight;
     font-weight: $fontweight;
