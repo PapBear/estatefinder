@@ -242,9 +242,14 @@ export default {
     }
   },
   mounted() {
-
+    this.checkData()
   },
   methods: {
+    checkData() {
+      if(!this.dataEstate) {
+        this.backToHome()
+      }
+    },
     backToHome() {
       this.$router.push("/")
     },
