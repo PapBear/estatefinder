@@ -1,0 +1,31 @@
+.header {
+  display: flex;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  max-width: 414px;
+  display: flex;
+  padding: 18px 15px 20px 15px;
+  background-color: white;
+  top: 0;
+  &__left {
+    flex: 0.7;
+    &-title {
+      @include font(20px, 30px, 600, #000000)
+    }
+  }
+  &__right {
+    display: flex;
+    flex: 0.3;
+    justify-content: flex-end;
+    &-image {
+      cursor: pointer;
+      &_first {
+        margin-right: 10px;
+      }
+      &_last {
+        margin-right: 15px;
+      }
+    }
+  }
+}

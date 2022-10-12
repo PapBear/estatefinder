@@ -1,0 +1,58 @@
+.customcarousel {
+  position: relative;
+  height: 145px;
+  margin-top: 76px;
+  display: flex;
+  align-items: center;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  scroll-snap-type: x mandatory;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  &__dot {
+    position: fixed;
+    top: 195px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 414px;
+    &_image {      
+      position: absolute;
+      bottom: 105px;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      max-width: 414px;
+      z-index: 2;
+    }
+    &-shape {
+      width: 6px;
+      height: 6px;
+      border-radius: 25px;
+      background-color: #F8F8F8;
+      margin: 0px 4px;
+      &_current {
+        width: 8px;
+        height: 8px;
+        background-color: #F8F8F8;
+      }
+    }
+  }
+  &__list {
+    margin: 0px 12px;
+    scroll-snap-align: center;
+    &_first {
+      margin-left: 32px;
+    }
+    &:last-child {
+      margin-right: 32px;
+    }
+    &-img {
+      width: auto;
+      height: 145px;
+    }
+  }
+}

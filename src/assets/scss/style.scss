@@ -1,0 +1,21 @@
+//Tools
+@import "tools/mixins";
+
+//Generic
+@import "generic/reset";
+
+//Elements
+@import "elements/fonts";
+
+//Components
+@import "component/header.scss";
+@import "component/headerresult.scss";
+@import "component/bottomnavigation.scss";
+@import "component/customcarousel.scss";
+@import "component/resultcard.scss";
+
+// Views
+@import "views/home.scss";
+@import "views/chat.scss";
+@import "views/result.scss";
+@import "views/detail.scss";
