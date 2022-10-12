@@ -18,6 +18,16 @@
     align-items: center;
     justify-content: center;
     max-width: 414px;
+    &_image {      
+      position: absolute;
+      bottom: 105px;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      max-width: 414px;
+      z-index: 2;
+    }
     &-shape {
       width: 6px;
       height: 6px;

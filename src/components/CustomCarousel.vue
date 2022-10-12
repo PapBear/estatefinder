@@ -4,7 +4,9 @@
       <div class="customcarousel__dot-shape" :class="{'customcarousel__dot-shape_current': index === indexScroll}" v-for="(dt, index) in imageList" :key="index"></div>
     </div>
     <div class="customcarousel__list" :class="{'customcarousel__list_first': index === 0}" v-for="(img, index) in imageList" :key="index">
-      <img class="customcarousel__list-img" :src="img" alt="image-house" />
+      <div>
+        <img class="customcarousel__list-img" :src="img" alt="image-house" />
+      </div>
     </div>
   </div>
 </template>

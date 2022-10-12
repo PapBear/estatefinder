@@ -1,7 +1,12 @@
 <template>
   <div class="resultcard" @click="goToDetail()">
     <div class="resultcard__content">
-      <img class="resultcard__content-image" :src="dataEstate.image[0]"/>
+      <!-- <div class="resultcard__content-image-container">
+        <div class="resultcard__content-image-list" v-for="(dt,index) in dataEstate.image" :key="index">
+          <img class="resultcard__content-image" :src="dt"/>
+        </div>
+      </div> -->
+      <ImageCarousel :imageList="dataEstate.image" :smallerImage="smallerImage"></ImageCarousel>
       <div class="resultcard__content-information">
         <p class="resultcard__content-information-text">{{dataEstate.room}} {{dataEstate.room > 1 ? "ROOMS" : "ROOM"}}</p>
         <div class="resultcard__content-circle"></div>
@@ -18,17 +23,22 @@
 </template>
 
 <script>
+import ImageCarousel from "@/components/ImageCarousel.vue"
 export default {
   name: 'ResultCard',
   props: {
-    dataEstate: Object
+    dataEstate: Object,
+    smallerImage: Boolean
+  },
+  components: {
+    ImageCarousel
   },
   mounted() {
-    console.log(this.dataEstate)
+
   },
   methods: {
     goToDetail() {
-      this.$router.push('/detail')
+      this.$router.push({ name: 'Detail', params: {dataEstate: this.dataEstate }})
     }
   }
 }

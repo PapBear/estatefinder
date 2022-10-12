@@ -1,6 +1,7 @@
 .resultcard {
   cursor: pointer;
   margin-bottom: 31px;
+  position: relative;
   &__content {
     margin-top: 15px;
     &-circle {
@@ -11,8 +12,28 @@
       margin: 0px 5px;
     }
     &-image {
-      width: 100%;
+      width: calc(100vw - 44px);
+      max-width: 414px;
+      height: 211px;
       margin-bottom: 15px;
+      transform-origin: top center;
+      margin-bottom: 15px;
+      &-container {
+        position: relative;
+        display: flex;
+        overflow-x: scroll;
+        scroll-snap-type: x mandatory;
+        &::-webkit-scrollbar {
+          display: none;
+        }
+      }
+      &-list {
+        scroll-snap-align: center;
+      }
+      &_smaller {
+        width: 245px;
+        height: 150px;
+      }
     }
     &-information {
       display: flex;

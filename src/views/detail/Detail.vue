@@ -84,8 +84,12 @@
     </div>
     <div class="detail__another-props">
       <p class="detail__another-props-text">Property near Jakarta Selatan</p>
-      <div class="detail__another-props-item" v-for="(dt,index) in moreEstate" :key="index">
-        <ResultCard :dataEstate="dt"></ResultCard>
+      <div class="detail__another-props-scroll">
+        <div class="detail__another-props-container">
+          <div class="detail__another-props-item" v-for="(dt,index) in moreEstate" :key="index">
+            <ResultCard :dataEstate="dt" :smallerImage="true"></ResultCard>
+          </div>
+        </div>
       </div>
     </div>
     <div class="detail__bottom">
@@ -108,41 +112,102 @@ import ResultCard from '@/components/ResultCard.vue'
 
 export default {
   name: 'Detail',
+  props: {
+    dataEstate: Object
+  },
   components: {
     ResultCard
   },
   data() {
     return {
-      dataEstate: {
-        image: [
-          require('@/assets/images/house1.png'),
-          require('@/assets/images/house2.png'),
-          require('@/assets/images/house3.png'),
-        ],
-        room:  2,
-        bathRoom: 1,
-        area: 250,
-        buildingSize: 300,
-        furnished: "Yes",
-        garage: "Yes",
-        Carport: "No",
-        title: "Rumah Tipe 68 Jalan Petukangan Jakarta Selatan , Budi Hasian",
-        price: "Rp 800 Juta",
-        certification: "SHM",
-        location: {
-          name: "Jakarta Selatan",
-          code: "jakartaselatan"
-        },
-        type: {
-          name: "House",
-          value: "house"
-        },
-        status: {
-          name: "Rent",
-          value: "rent"
-        },
-      },
+      // dataEstate: {
+      //   image: [
+      //     require('@/assets/images/house1.png'),
+      //     require('@/assets/images/house2.png'),
+      //     require('@/assets/images/house3.png'),
+      //   ],
+      //   room:  2,
+      //   bathRoom: 1,
+      //   area: 250,
+      //   buildingSize: 300,
+      //   furnished: "Yes",
+      //   garage: "Yes",
+      //   Carport: "No",
+      //   title: "Rumah Tipe 68 Jalan Petukangan Jakarta Selatan , Budi Hasian",
+      //   price: "Rp 800 Juta",
+      //   certification: "SHM",
+      //   location: {
+      //     name: "Jakarta Selatan",
+      //     code: "jakartaselatan"
+      //   },
+      //   type: {
+      //     name: "House",
+      //     value: "house"
+      //   },
+      //   status: {
+      //     name: "Rent",
+      //     value: "rent"
+      //   },
+      // },
       moreEstate: [
+        {
+          image: [
+            require('@/assets/images/house1.png'),
+            require('@/assets/images/house2.png'),
+            require('@/assets/images/house3.png'),
+          ],
+          room:  2,
+          bathRoom: 1,
+          area: 250,
+          buildingSize: 300,
+          furnished: "Yes",
+          garage: "Yes",
+          Carport: "No",
+          title: "Rumah Tipe 68 Jalan Petukangan Jakarta Selatan , Budi Hasian",
+          price: "Rp 800 Juta",
+          certification: "SHM",
+          location: {
+            name: "Jakarta Selatan",
+            code: "jakartaselatan"
+          },
+          type: {
+            name: "House",
+            value: "house"
+          },
+          status: {
+            name: "Rent",
+            value: "rent"
+          },
+        },
+        {
+          image: [
+            require('@/assets/images/house1.png'),
+            require('@/assets/images/house2.png'),
+            require('@/assets/images/house3.png'),
+          ],
+          room:  2,
+          bathRoom: 1,
+          area: 250,
+          buildingSize: 300,
+          furnished: "Yes",
+          garage: "Yes",
+          Carport: "No",
+          title: "Rumah Tipe 68 Jalan Petukangan Jakarta Selatan , Budi Hasian",
+          price: "Rp 800 Juta",
+          certification: "SHM",
+          location: {
+            name: "Jakarta Selatan",
+            code: "jakartaselatan"
+          },
+          type: {
+            name: "House",
+            value: "house"
+          },
+          status: {
+            name: "Rent",
+            value: "rent"
+          },
+        },
         {
           image: [
             require('@/assets/images/house1.png'),

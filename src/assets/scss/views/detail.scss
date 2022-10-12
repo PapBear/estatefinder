@@ -134,13 +134,25 @@
   }
   &__another-props {
     margin-top: 39px;
-    padding-left: 22px;
     padding-bottom: 117px;
+    &-container {
+      display: flex;
+      width: fit-content;
+    }
+    &-scroll {
+      padding-left: 22px;
+      overflow-x: scroll;
+      &::-webkit-scrollbar {
+        display: none;
+      }
+    }
     &-text {
+      padding-left: 22px;
       @include font(14px, 18px, 600, #42505C)
     }
     &-item {
-      max-width: 245px;
+      margin-right: 25px;
+      width: 245px;
     }
   }
   &__bottom {
