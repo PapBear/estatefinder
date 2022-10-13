@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Home from '../views/home/Home.vue'
+import Home from '../views/home/HomeIndex.vue'
 import Chat from '../views/chat/Chat.vue'
 import Result from '../views/result/Result.vue'
 import Detail from '../views/detail/Detail.vue'
